@@ -4,14 +4,13 @@ import time
 import torch
 import torch.distributed as dist
 import torch.multiprocessing as mp
+from data import SumData
+from model import SumModel
 from torch import nn
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.optim import Adam
 from torch.utils.data import DataLoader
 from torch.utils.data.distributed import DistributedSampler
-
-from data import SumData
-from model import SumModel
 from utils import evaluation
 
 

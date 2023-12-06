@@ -1,7 +1,6 @@
+from data import SumData
 from torch import nn
 from torch.utils.data import DataLoader
-
-from data import SumData
 
 
 def evaluation(model: nn.Module):
