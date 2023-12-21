@@ -1,9 +1,8 @@
 import json
 
 import torch
-from torch.utils.data import Dataset
-
 from tokenizer import encode
+from torch.utils.data import Dataset
 
 
 class TangPoemDataset(Dataset):

@@ -1,8 +1,7 @@
 import torch
+from data_source import TangPoemDataset, collote_fn
 from torch.utils.data import DataLoader
 from transformers import AutoConfig, AutoModelForCausalLM
-
-from data_source import TangPoemDataset, collote_fn
 
 model_path = "./model"
 

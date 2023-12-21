@@ -1,7 +1,6 @@
 import torch
-from transformers import AutoModelForCausalLM
-
 from tokenizer import decode, encode
+from transformers import AutoModelForCausalLM
 
 model_path = "./model"
 
