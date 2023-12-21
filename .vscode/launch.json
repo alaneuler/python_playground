@@ -13,6 +13,18 @@
             "justMyCode": false
         },
         {
+            "name": "My LlaMA File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/my_llama",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/my_llama",
+            }
+        },
+        {
             "name": "Simple Training",
             "type": "python",
             "request": "launch",
