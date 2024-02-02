@@ -47,6 +47,18 @@
                 "PYTHONPATH": "${workspaceFolder}",
                 "CUDA_VISIBLE_DEVICES": "0,1,2,3",
             },
+        },
+        {
+            "name": "BERT Classifier",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/bert_classifier"
+            },
+            "cwd": "${workspaceFolder}/bert_classifier"
         }
     ]
 }
