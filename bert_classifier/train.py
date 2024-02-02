@@ -7,7 +7,7 @@ from transformers import (
 )
 
 model_path = "/data2/public_file/LLM_model/chinese-roberta-wwm-ext"
-max_length = 5
+max_length = 10
 
 
 def tokenize_map(examples):
@@ -34,12 +34,8 @@ model.train()
 
 training_args = TrainingArguments(
     output_dir="./results",
-    num_train_epochs=5,
-    logging_dir="./logs",
+    num_train_epochs=8,
     evaluation_strategy="epoch",
-    save_strategy="epoch",
-    load_best_model_at_end=True,
-    save_total_limit=2,
 )
 trainer = Trainer(
     model,
@@ -49,4 +45,4 @@ trainer = Trainer(
 )
 
 trainer.train()
-# trainer.save_model("./results")
+trainer.save_model("./results/final_model")
