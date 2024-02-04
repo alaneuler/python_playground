@@ -59,6 +59,18 @@
                 "PYTHONPATH": "${workspaceFolder}/bert_classifier"
             },
             "cwd": "${workspaceFolder}/bert_classifier"
+        },
+        {
+            "name": "Loss",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/loss"
+            },
+            "cwd": "${workspaceFolder}/loss"
         }
     ]
 }
