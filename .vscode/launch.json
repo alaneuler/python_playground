@@ -71,6 +71,18 @@
                 "PYTHONPATH": "${workspaceFolder}/loss"
             },
             "cwd": "${workspaceFolder}/loss"
+        },
+        {
+            "name": "PyTorch",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/pytorch"
+            },
+            "cwd": "${workspaceFolder}/pytorch"
         }
     ]
 }

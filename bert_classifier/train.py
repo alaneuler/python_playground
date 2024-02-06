@@ -22,7 +22,10 @@ def tokenize_map(examples):
 tokenizer = BertTokenizer.from_pretrained(model_path)
 data_set = load_dataset(
     "json",
-    data_files={"train": "./data/train.json", "validation": "./data/val.json"},
+    data_files={
+        "train": "./data/train.json",
+        "validation": "./data/val.json",
+    },
 )
 data_set = data_set.map(tokenize_map, batched=True)
 

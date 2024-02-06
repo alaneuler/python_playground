@@ -7,7 +7,10 @@ model_path = "./model"
 
 config = AutoConfig.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_config(config)
-print("Number of parameters:", sum(p.numel() for p in model.parameters()))
+print(
+    "Number of parameters:",
+    sum(p.numel() for p in model.parameters()),
+)
 
 dataset = TangPoemDataset("data/tang_poems_manual.json")
 data_loader = DataLoader(dataset, batch_size=1, collate_fn=collote_fn)

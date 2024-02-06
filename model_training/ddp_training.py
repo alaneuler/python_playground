@@ -69,7 +69,11 @@ def train_main(rank, world_size, hidden_size):
             total_loss += loss.item()
         print(
             "Epoch %d on %d average loss: %.3f"
-            % (epoch, rank, (total_loss / len(dataloader) / batch_size))
+            % (
+                epoch,
+                rank,
+                (total_loss / len(dataloader) / batch_size),
+            )
         )
     cleanup()
 
@@ -85,7 +89,11 @@ if __name__ == "__main__":
         world_size = 4
         os.environ["MASTER_ADDR"] = "localhost"
         os.environ["MASTER_PORT"] = "12355"
-        mp.spawn(train_main, nprocs=world_size, args=(world_size, hidden_size))
+        mp.spawn(
+            train_main,
+            nprocs=world_size,
+            args=(world_size, hidden_size),
+        )
         print(f"Training took: {time.time() - start} seconds.")
 
     model = SumModel(hidden_size)
